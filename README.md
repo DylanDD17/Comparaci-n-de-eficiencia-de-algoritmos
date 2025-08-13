@@ -1,42 +1,45 @@
-# Comparaci-n-de-eficiencia-de-algoritmos
+# Comparación de eficiencia de algoritmos
 
-El proporsito de esta tarea es probar y comparar dos maneras de calcular el factorial de un número:
+El propósito de esta tarea es probar y comparar dos maneras de calcular el factorial de un número:
 
-Recursiva
+- **Recursiva**
+- **Iterativa**
 
-Iterativa
+La idea es medir cuánto tardan y cuánta memoria usan, y ver las diferencias entre ambas.  
+El programa se realizó en **C** y también en **Python** para comparar.
 
-La idea es medir cuánto tardan y cuánta memoria usan, y ver las diferencias entre ambas.
-El programa se realizo en C y también en Python para comparar.
+---
 
-Cómo funciona:
-Método Recursivo
-La función se llama a sí misma hasta llegar a 1.
-Puede gastar más memoria porque se guardan muchas llamadas en la pila.
+## Cómo funciona
 
-Método Iterativo
-Usa un bucle (for) para multiplicar desde 1 hasta n.
-Es más eficiente con la memoria y normalmente más rápido para valores grandes.
+### Método Recursivo
+- La función se llama a sí misma hasta llegar a 1.
+- Puede gastar más memoria porque se guardan muchas llamadas en la pila.
 
-Medicion tiempo y memoria
-Tiempo:
+### Método Iterativo
+- Usa un bucle (`for`) para multiplicar desde 1 hasta *n*.
+- Es más eficiente con la memoria y normalmente más rápido para valores grandes.
 
-En C usé clock() para medir los segundos que tarda.
+---
 
-En Python usé time.time().
+## Medición de tiempo y memoria
 
-Memoria:
+**Tiempo:**
+- En **C** se utilizó `clock()` para medir los segundos que tarda.
+- En **Python** se utilizó `time.time()`.
 
-En C usé GetProcessMemoryInfo() para saber cuánta memoria está usando el programa.
+**Memoria:**
+- En **C** se utilizó `GetProcessMemoryInfo()` para saber cuánta memoria está usando el programa.
+- En **Python** se utilizó `memory_profiler`.
 
-En Python usé memory_profiler.
+---
 
+## Resultados:
 
-RESULTADOS
-Los resultados que obtuve muestran que:
+Los resultados obtenidos muestran que
 
-La versión recursiva usa más memoria.
+<img width="997" height="491" alt="image" src="https://github.com/user-attachments/assets/e43c6678-0211-4f48-8144-08f1709e3c94" />
 
-La versión iterativa es más estable y rápida en la mayoría de los casos.
-
-Para números muy grandes, la recursiva puede llegar a romperse por límite de llamadas.
+- La versión **recursiva** usa más memoria.
+- La versión **iterativa** es más estable y rápida en la mayoría de los casos.
+- Para números muy grandes, la recursiva puede romperse por el límite de llamadas.
